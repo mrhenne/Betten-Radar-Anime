@@ -58,7 +58,6 @@
             margin: 0 auto;
         }
 
-        /* Anime Header */
         .header {
             padding: 10px 0;
             display: flex;
@@ -75,7 +74,6 @@
             text-shadow: 2px 2px 0px var(--anime-black);
         }
 
-        /* ZNA Status Bar */
         .zna-status-container {
             display: flex;
             gap: 4px;
@@ -104,7 +102,6 @@
         .zna-btn.active.crit { background: var(--anime-pink); }
         .zna-btn.active.out { background: var(--anime-purple); }
 
-        /* NEUE STATS GRID */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -136,7 +133,6 @@
             border: 2px solid black;
         }
 
-        /* Tab Nav */
         .tab-nav {
             display: flex;
             background: var(--anime-black);
@@ -158,12 +154,8 @@
             cursor: pointer;
         }
 
-        .tab-btn.active {
-            background: var(--anime-green);
-            color: var(--anime-black);
-        }
+        .tab-btn.active { background: var(--anime-green); color: var(--anime-black); }
 
-        /* Station Card Anime */
         .station-card {
             background: white;
             border: var(--anime-border);
@@ -187,79 +179,31 @@
         }
         .station-card.full .full-banner { display: block; }
 
-        /* Station Header Kompakt */
-        .station-header {
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+        .station-header { padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+        .header-top-row { display: flex; align-items: center; justify-content: space-between; }
+        .station-name { font-weight: 900; font-size: 15px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        .header-top-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .station-name {
-            font-weight: 900;
-            font-size: 15px;
-            flex: 1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .inline-controls { 
-            display: flex; 
-            gap: 3px; 
-            align-items: center;
-        }
-
-        .stepper-unit {
-            display: flex; align-items: center;
-            background: #eee; border: 2px solid var(--anime-black);
-            border-radius: 6px; padding: 1px;
-        }
+        .inline-controls { display: flex; gap: 3px; align-items: center; }
+        .stepper-unit { display: flex; align-items: center; background: #eee; border: 2px solid var(--anime-black); border-radius: 6px; padding: 1px; }
         body.dark-mode .stepper-unit { background: #444; }
         .stepper-label { font-size: 7px; font-weight: 900; width: 12px; text-align: center; }
         .s-btn { width: 20px; height: 20px; border: none; background: white; font-weight: 900; border-radius: 3px; cursor: pointer; }
         .s-val { width: 16px; text-align: center; font-weight: 900; font-size: 10px; }
 
-        /* Notizen & Tel */
-        .extra-info {
-            padding: 8px 10px;
-            border-top: 2px dashed var(--anime-black);
-            background: rgba(0,0,0,0.02);
-            display: flex; flex-direction: column; gap: 4px;
-        }
+        .extra-info { padding: 8px 10px; border-top: 2px dashed var(--anime-black); background: rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 4px; }
+        .info-input { width: 100%; background: transparent; border: 1px solid rgba(0,0,0,0.1); padding: 4px; font-size: 10px; border-radius: 4px; color: var(--text-primary); }
 
-        .info-input {
-            width: 100%; background: transparent; border: 1px solid rgba(0,0,0,0.1);
-            padding: 4px; font-size: 10px; border-radius: 4px; color: var(--text-primary);
-        }
-
-        /* Übersicht */
-        .uebersicht-grid {
-            display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-top: 10px;
-        }
+        .uebersicht-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-top: 10px; }
         .bar-wrapper { display: flex; flex-direction: column; gap: 2px; align-items: center; }
+        .bar-label-container { display: flex; justify-content: space-between; width: 100%; padding: 0 2px; }
         .bar-label { font-size: 7px; font-weight: 900; color: var(--text-primary); opacity: 0.7; text-transform: uppercase; }
+        .bar-value { font-size: 8px; font-weight: 900; color: var(--text-primary); }
         .uebersicht-bar-container { width: 100%; height: 6px; background: #eee; border-radius: 4px; overflow: hidden; border: 1px solid #121212; }
         body.dark-mode .uebersicht-bar-container { background: #444; }
         .uebersicht-bar { height: 100%; transition: width 0.5s; }
 
-        /* Actions */
-        .bottom-actions {
-            position: sticky; bottom: 0; padding: 10px 0;
-            background: var(--bg-base); display: flex; gap: 8px;
-        }
-
-        .btn-anime {
-            flex: 1; padding: 12px; border: var(--anime-border);
-            box-shadow: var(--anime-shadow); border-radius: 10px;
-            font-family: 'Bungee', cursive; font-size: 11px; cursor: pointer;
-        }
+        .bottom-actions { position: sticky; bottom: 0; padding: 10px 0; background: var(--bg-base); display: flex; gap: 8px; z-index: 100; }
+        .btn-anime { flex: 1; padding: 12px; border: var(--anime-border); box-shadow: var(--anime-shadow); border-radius: 10px; font-family: 'Bungee', cursive; font-size: 11px; cursor: pointer; }
         .btn-anime:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0px var(--anime-black); }
         .btn-green { background: var(--anime-green); color: white; }
         .btn-pink { background: var(--anime-pink); color: white; }
@@ -269,8 +213,9 @@
 
         .archive-item { border: 2px solid var(--anime-black); border-radius: 10px; padding: 8px; margin-bottom: 8px; font-size: 10px; background: #fafafa; }
         body.dark-mode .archive-item { background: #333; }
-
         .station-card.drag-over { border: 3px dashed var(--anime-green); transform: scale(1.02); }
+
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; z-index: 2000; align-items: center; justify-content: center; }
     </style>
 </head>
 <body class="light-mode">
@@ -285,7 +230,6 @@
             </div>
         </header>
 
-        <!-- ZNA Status -->
         <div class="zna-status-container">
             <button id="zna-normal" class="zna-btn normal" onclick="setZNA('normal')">Normal</button>
             <button id="zna-high" class="zna-btn high" onclick="setZNA('high')">Erhöht</button>
@@ -293,7 +237,6 @@
             <button id="zna-out" class="zna-btn out" onclick="setZNA('out')">Abmeldung</button>
         </div>
 
-        <!-- Global Stats Separat -->
         <div class="stats-grid">
             <div class="stat-card" style="border-color: var(--anime-blue);">
                 <div class="stat-label">Männer</div>
@@ -328,16 +271,15 @@
         <main id="content-area" class="content-area"></main>
 
         <div class="bottom-actions">
-            <button class="btn-anime btn-pink" onclick="archiveAndReset()">RESET & LOG</button>
+            <button class="btn-anime btn-pink" onclick="handleArchiveReset()">RESET & LOG</button>
             <button class="btn-anime btn-green" onclick="openAddModal()">NEU +</button>
         </div>
     </div>
 
-    <!-- Modals -->
-    <div id="modal-container" class="modal-overlay" style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; z-index: 2000; align-items: center; justify-content: center;">
-        <div class="modal-content" style="background: white; padding: 20px; border: var(--anime-border); border-radius: 20px; width: 90%; max-width: 400px;">
+    <div id="modal-container" class="modal-overlay" onclick="closeModal()">
+        <div class="modal-content" style="background: white; padding: 20px; border: var(--anime-border); border-radius: 20px; width: 90%; max-width: 400px;" onclick="event.stopPropagation()">
             <h3 id="modal-title" style="font-family:'Bungee'; margin-bottom: 15px;">AKTION</h3>
-            <input type="text" id="modal-input" class="modal-input" style="width:100%; padding:10px; border:2px solid #000; border-radius:10px;" placeholder="Eingabe...">
+            <input type="text" id="modal-input" class="modal-input" style="width:100%; padding:10px; border:2px solid #000; border-radius:10px; margin-bottom: 10px;" placeholder="Eingabe...">
             <div style="display:flex; gap:10px; margin-top:15px;">
                 <button class="btn-anime" onclick="closeModal()">X</button>
                 <button class="btn-anime btn-green" id="modal-confirm">OK</button>
@@ -361,44 +303,55 @@
         let draggedItemIdx = null;
 
         function init() {
-            const saved = localStorage.getItem('betten_radar_v5');
-            if(saved) state = JSON.parse(saved);
+            const saved = localStorage.getItem('betten_radar_v6');
+            if(saved) {
+                const parsed = JSON.parse(saved);
+                state = Object.assign(state, parsed);
+                if (!Array.isArray(state.archive)) state.archive = [];
+            }
             applyTheme();
             updateZNAUI();
+            updateStats();
             render();
         }
 
-        function save() {
-            localStorage.setItem('betten_radar_v5', JSON.stringify(state));
+        function saveState() {
+            localStorage.setItem('betten_radar_v6', JSON.stringify(state));
             updateStats();
         }
 
         function applyTheme() { document.body.className = state.theme + '-mode'; }
-        function toggleTheme() { state.theme = state.theme === 'light' ? 'dark' : 'light'; applyTheme(); save(); }
+        function toggleTheme() { state.theme = state.theme === 'light' ? 'dark' : 'light'; applyTheme(); saveState(); }
 
         function setZNA(status) {
             state.znaStatus = status;
             updateZNAUI();
             updateLastCheck();
-            save();
+            saveState();
         }
 
         function updateZNAUI() {
             document.querySelectorAll('.zna-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('zna-' + state.znaStatus).classList.add('active');
+            const activeBtn = document.getElementById('zna-' + state.znaStatus);
+            if (activeBtn) activeBtn.classList.add('active');
         }
 
         function switchTab(t) {
             state.tab = t;
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById('tab-' + t).classList.add('active');
+            const activeBtn = document.getElementById('tab-' + t);
+            if (activeBtn) activeBtn.classList.add('active');
             render();
         }
 
         function updateStats() {
             let m=0, w=0, z=0, iso=0, entl=0;
             state.stations.forEach(s => { 
-                m += s.m; w += s.w; z += s.z; iso += s.iso; entl += s.entl;
+                m += Number(s.m) || 0; 
+                w += Number(s.w) || 0; 
+                z += Number(s.z) || 0; 
+                iso += Number(s.iso) || 0; 
+                entl += Number(s.entl) || 0;
             });
             document.getElementById('val-m').innerText = m;
             document.getElementById('val-w').innerText = w;
@@ -415,42 +368,51 @@
         function step(id, f, d) {
             const s = state.stations.find(x => x.id === id);
             if(s) {
-                s[f] = Math.max(0, s[f] + d);
+                s[f] = Math.max(0, (Number(s[f]) || 0) + d);
                 s.last = new Date().toLocaleTimeString('de-DE', {hour:'2-digit', minute:'2-digit'});
                 updateLastCheck();
-                save(); render();
+                saveState(); render();
             }
         }
 
         function updateField(id, f, v) {
             const s = state.stations.find(x => x.id === id);
-            if(s) { s[f] = v; updateLastCheck(); save(); }
+            if(s) { s[f] = v; updateLastCheck(); saveState(); }
         }
 
-        function archiveAndReset() {
-            if(!confirm("Schicht beenden? Alle aktuellen Daten werden archiviert und die Stationen genullt.")) return;
+        function handleArchiveReset() {
+            if(!confirm("⚠️ ACHTUNG: Willst du die aktuelle Schicht beenden? Alle Daten werden ins Archiv verschoben und die Counter genullt.")) return;
             
-            // Stats berechnen
+            // Stats für Archiv berechnen
             let m=0, w=0, z=0, iso=0, entl=0;
-            state.stations.forEach(s => { m+=s.m; w+=s.w; z+=s.z; iso+=s.iso; entl+=s.entl; });
+            state.stations.forEach(s => { 
+                m += Number(s.m) || 0; 
+                w += Number(s.w) || 0; 
+                z += Number(s.z) || 0; 
+                iso += Number(s.iso) || 0; 
+                entl += Number(s.entl) || 0;
+            });
 
             const summary = {
                 timestamp: new Date().toLocaleString('de-DE'),
                 zna: state.znaStatus.toUpperCase(),
                 total: { m, w, z, iso, entl },
-                details: state.stations.map(s => `${s.name}: ${s.m}/${s.w}/${s.z}/I:${s.iso}/E:${s.entl}`)
+                details: state.stations.map(s => `${s.name}: M:${s.m}/W:${s.w}/Z:${s.z}/I:${s.iso}/E:${s.entl}`)
             };
 
+            // Ins Archiv pushen
+            if (!Array.isArray(state.archive)) state.archive = [];
             state.archive.push(summary);
             
-            // Reset
+            // Counter resetten
             state.stations.forEach(s => { 
                 s.m=0; s.w=0; s.z=0; s.iso=0; s.entl=0; s.note=''; s.last='--:--'; 
             });
             
             updateLastCheck();
-            save(); 
+            saveState(); 
             render();
+            alert("✅ Schicht archiviert und Counter zurückgesetzt!");
         }
 
         function closeModal() { document.getElementById('modal-container').style.display = "none"; }
@@ -463,7 +425,7 @@
                 const name = document.getElementById('modal-input').value;
                 if(name) {
                     state.stations.push({ id: Date.now().toString(), name, m:0, w:0, z:0, iso:0, entl:0, phone:'', note:'', last:'--:--' });
-                    closeModal(); save(); render();
+                    closeModal(); saveState(); render();
                 }
             };
         }
@@ -475,34 +437,45 @@
             document.getElementById('modal-container').style.display = "flex";
             document.getElementById('modal-confirm').onclick = () => {
                 const name = document.getElementById('modal-input').value;
-                if(name) { s.name = name; closeModal(); save(); render(); }
+                if(name) { s.name = name; closeModal(); saveState(); render(); }
             };
         }
 
         function deleteStation(id) {
-            if(confirm("Löschen?")) { state.stations = state.stations.filter(x => x.id !== id); save(); render(); }
+            if(confirm("Station wirklich löschen?")) { state.stations = state.stations.filter(x => x.id !== id); saveState(); render(); }
         }
 
         function shareStatus() {
             let text = `🏥 BETTEN-RADAR HELIOS DU [${state.lastGlobalCheck}]\n`;
             text += `🚨 ZNA STATUS: ${state.znaStatus.toUpperCase()}\n\n`;
             state.stations.forEach(s => {
-                if(s.m+s.w+s.z+s.iso+s.entl > 0) {
+                const total = (Number(s.m)||0) + (Number(s.w)||0) + (Number(s.z)||0) + (Number(s.iso)||0) + (Number(s.entl)||0);
+                if(total > 0) {
                     text += `🔹 ${s.name}: M:${s.m} W:${s.w} Z:${s.z} I:${s.iso} E:${s.entl}\n`;
                     if(s.note) text += `   📝 ${s.note}\n`;
                 }
             });
-            if (navigator.share) navigator.share({ title: 'Betten-Radar', text: text });
-            else { navigator.clipboard.writeText(text).then(() => alert("Kopiert!")); }
+            if (navigator.share) {
+                navigator.share({ title: 'Betten-Radar', text: text });
+            } else { 
+                const dummy = document.createElement("textarea");
+                document.body.appendChild(dummy);
+                dummy.value = text;
+                dummy.select();
+                document.execCommand("copy");
+                document.body.removeChild(dummy);
+                alert("📋 Status in Zwischenablage kopiert!"); 
+            }
         }
 
         function render() {
             const container = document.getElementById('content-area');
+            if (!container) return;
             container.innerHTML = '';
 
             if(state.tab === 'betten') {
                 state.stations.forEach((s, idx) => {
-                    const isFull = (s.m === 0 && s.w === 0 && s.z === 0 && s.iso === 0);
+                    const isFull = (Number(s.m) === 0 && Number(s.w) === 0 && Number(s.z) === 0 && Number(s.iso) === 0);
                     const card = document.createElement('div');
                     card.className = `station-card ${isFull ? 'full' : ''}`;
                     card.draggable = true;
@@ -518,16 +491,16 @@
                                     ${renderStepper(s.id, 'iso', s.iso, 'var(--anime-orange)', 'I')}
                                     ${renderStepper(s.id, 'entl', s.entl, 'var(--anime-green)', 'E')}
                                 </div>
-                                <div class="card-actions">
-                                    <span class="action-icon" onclick="openEditModal('${s.id}')">✏️</span>
-                                    <span class="action-icon" onclick="deleteStation('${s.id}')">🗑️</span>
+                                <div style="display:flex; gap:5px; margin-left:8px;">
+                                    <span style="cursor:pointer;" onclick="openEditModal('${s.id}')">✏️</span>
+                                    <span style="cursor:pointer;" onclick="deleteStation('${s.id}')">🗑️</span>
                                 </div>
                             </div>
                         </div>
                         <div class="extra-info">
-                            <input type="tel" class="info-input" placeholder="📞 Telefon..." value="${s.phone}" onchange="updateField('${s.id}','phone',this.value)">
-                            <input type="text" class="info-input" placeholder="📝 Notiz..." value="${s.note}" onchange="updateField('${s.id}','note',this.value)">
-                            <div style="font-size:7px; opacity:0.5; text-align:right">Ref: ${s.last}</div>
+                            <input type="tel" class="info-input" placeholder="📞 Telefon..." value="${s.phone || ''}" onchange="updateField('${s.id}','phone',this.value)">
+                            <input type="text" class="info-input" placeholder="📝 Notiz..." value="${s.note || ''}" onchange="updateField('${s.id}','note',this.value)">
+                            <div style="font-size:7px; opacity:0.5; text-align:right">Update: ${s.last || '--:--'}</div>
                         </div>
                     `;
                     card.addEventListener('dragstart', () => draggedItemIdx = idx);
@@ -536,13 +509,13 @@
                     card.addEventListener('drop', () => {
                         const item = state.stations.splice(draggedItemIdx, 1)[0];
                         state.stations.splice(idx, 0, item);
-                        save(); render();
+                        saveState(); render();
                     });
                     container.appendChild(card);
                 });
             } else if(state.tab === 'uebersicht') {
                 state.stations.forEach(s => {
-                    const total = s.m + s.w + s.z + s.iso;
+                    const total = (Number(s.m)||0) + (Number(s.w)||0) + (Number(s.z)||0) + (Number(s.iso)||0);
                     const card = document.createElement('div');
                     card.className = 'station-card';
                     card.style.padding = '10px';
@@ -562,19 +535,20 @@
                     container.appendChild(card);
                 });
             } else if(state.tab === 'archiv') {
-                if(state.archive.length === 0) {
+                if(!state.archive || state.archive.length === 0) {
                     container.innerHTML = '<div style="text-align:center; padding:40px; font-weight:900; opacity:0.5;">ARCHIV LEER</div>';
+                } else {
+                    state.archive.slice().reverse().forEach(log => {
+                        const div = document.createElement('div');
+                        div.className = 'archive-item';
+                        div.innerHTML = `
+                            <div style="font-weight:900; color:var(--anime-pink);">${log.timestamp} [ZNA: ${log.zna}]</div>
+                            <div style="margin:5px 0;">M:${log.total.m} | W:${log.total.w} | Z:${log.total.z} | I:${log.total.iso} | E:${log.total.entl}</div>
+                            <div style="font-size:8px; opacity:0.6;">${log.details.join(', ')}</div>
+                        `;
+                        container.appendChild(div);
+                    });
                 }
-                state.archive.slice().reverse().forEach(log => {
-                    const div = document.createElement('div');
-                    div.className = 'archive-item';
-                    div.innerHTML = `
-                        <div style="font-weight:900; color:var(--anime-pink);">${log.timestamp} [ZNA: ${log.zna}]</div>
-                        <div style="margin:5px 0;">M:${log.total.m} | W:${log.total.w} | Z:${log.total.z} | I:${log.total.iso} | E:${log.total.entl}</div>
-                        <div style="font-size:8px; opacity:0.6;">${log.details.join(', ')}</div>
-                    `;
-                    container.appendChild(div);
-                });
             }
             updateStats();
         }
@@ -584,21 +558,25 @@
                 <div class="stepper-unit">
                     <span class="stepper-label" style="color:${color}">${label}</span>
                     <button class="s-btn" onclick="step('${id}','${field}',-1)">-</button>
-                    <div class="s-val">${val}</div>
+                    <div class="s-val">${val || 0}</div>
                     <button class="s-btn" onclick="step('${id}','${field}',1)">+</button>
                 </div>
             `;
         }
 
         function renderMiniBar(val, max, color, label) {
-            const p = Math.min(100, (val / max) * 100);
+            const v = Number(val) || 0;
+            const p = Math.min(100, (v / max) * 100);
             return `<div class="bar-wrapper">
-                <span class="bar-label">${label}</span>
+                <div class="bar-label-container">
+                    <span class="bar-label">${label}</span>
+                    <span class="bar-value">${v}</span>
+                </div>
                 <div class="uebersicht-bar-container"><div class="uebersicht-bar" style="width:${p}%; background:${color}"></div></div>
             </div>`;
         }
 
-        init();
+        window.onload = init;
     </script>
 </body>
 </html>
